@@ -14,7 +14,8 @@ class GoalTest < ActiveSupport::TestCase
     assert @goal.valid?
   end
 
-  test "goal is valid an end date" do
+  test "goal is valid without an end date" do
+    @goal.goal_end = nil
     assert @goal.valid?
   end
 
