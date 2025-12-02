@@ -6,11 +6,10 @@ class GoalTest < ActiveSupport::TestCase
   end
 
   test "goal is valid with valid attributes" do 
-    @goal.goal_start = nil
     assert @goal.valid?
   end
 
-  test "goal is valid with a start date" do
+  test "goal is valid without a start date" do
     @goal.goal_start = nil
     assert @goal.valid?
   end
