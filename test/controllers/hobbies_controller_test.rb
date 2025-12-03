@@ -1,6 +1,6 @@
 require "test_helper"
 
-class HobbyControllerTest < ActionDispatch::IntegrationTest
+class HobbiesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
