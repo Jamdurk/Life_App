@@ -5,14 +5,10 @@ Rails.application.routes.draw do
   get "/goals", to: "goals#goals_page"
   get "/hobbies", to: "hobbies#hobbies_page"
 
+  resources :daily_entries, only: [:edit, :update,  :create, :destroy]
+  resources :goals, only: [:edit, :update,  :create, :destroy]
+  resources :hobbies, only: [:edit, :update,  :create, :destroy]
 
   get "up" => "rails/health#show", as: :rails_health_check
-
-  # Render dynamic PWA files from app/views/pwa/*
-  get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
-  get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
-
-  # Defines the root path route ("/")
-  # root "posts#index"
 end
 
