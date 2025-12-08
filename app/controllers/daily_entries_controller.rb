@@ -2,13 +2,14 @@ class DailyEntriesController < ApplicationController
 
     def home 
         @daily_entry = DailyEntry.new
-        @daily_entries = DailyEntry.order(date: :desc).limit(10)
     end
-
+    
     def create
         @daily_entry = DailyEntry.new(daily_entry_params)
+        @daily_entry.date = Date.current
+        
         if @daily_entry.save
-            redirect_to home_path, notice: "Daily entry created successfully"
+            redirect_to root_path, notice: "Daily entry created successfully"
         else
             render :home, status: :unprocessable_entity
         end
@@ -20,4 +21,4 @@ class DailyEntriesController < ApplicationController
         params.require(:daily_entry).permit(:date, :day_content, :mood)
     end
 
-end
+end 
