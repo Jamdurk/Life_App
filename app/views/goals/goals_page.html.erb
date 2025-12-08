@@ -1,1 +1,28 @@
-goals page
+<h1>Goals Page</h1>
+<p> Hello welcome to your goal setting page.</p>
+
+<div class="content-container">
+ <p> You can add the start and end date of your goal, as well as the content of your goal. </p>
+   <p> What is your goal? What do you want to accomplish? </p>
+     <p> What is a realsitic timeline for you to accomplish this goal? </p>
+      <p> Think deeply on these things and write your goal down!</p>
+</div>
+
+<%= form_with model: @goal, url: goals_path, local: true do |f| %>
+    <div class="input-field-goal-start">
+      <%= f.label :goal_start, "Goal Start" %>
+      <%= f.date_field :goal_start %>
+    </div>
+  
+    <div class="input-field-goal-end">
+      <%= f.label :goal_end, "Goal End" %>
+      <%= f.date_field :goal_end %>
+    </div>
+
+    <div class="input-field-goal-content">
+      <%= f.label :goal_content, "Goal Content" %>
+      <%= f.text_area :goal_content %>
+    </div>
+
+    <%= f.submit "Submit" %>
+<% end %>
