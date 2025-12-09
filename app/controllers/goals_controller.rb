@@ -12,7 +12,8 @@ class GoalsController < ApplicationController
         @goal = Goal.new(goal_params)
         
         if @goal.save
-            redirect_to root_path, notice: "Goal created successfully"
+            flash[:notice] = "Goal created successfully"
+            redirect_to goals_path
         else
             render :goals_page, status: :unprocessable_entity
         end
