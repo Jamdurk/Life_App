@@ -9,6 +9,8 @@
 </div>
 
 <%= form_with model: @hobby, url: hobbies_path, local: true do |f| %>
+    <%= render "shared/error_messages", object: @hobby %>
+
     <div class="input-field-hobby-start">
       <%= f.label :start_date, "Start Date" %>
       <%= f.date_field :start_date %>

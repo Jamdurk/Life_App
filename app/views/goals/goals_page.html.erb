@@ -9,6 +9,8 @@
 </div>
 
 <%= form_with model: @goal, url: goals_path, local: true do |f| %>
+    <%= render "shared/error_messages", object: @goal %>
+
     <div class="input-field-goal-start">
       <%= f.label :goal_start, "Goal Start" %>
       <%= f.date_field :goal_start %>
