@@ -34,5 +34,12 @@ class GoalsControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "goal content should not exceed 150 characters" do
+    assert_no_difference("Goal.count") do
+      post goals_path, params: { goal: { goal_content: "Test" * 150, goal_start: Date.current, goal_end: Date.current } }
+      assert_select "div#error_explanation",  "The form contains 1 error • Goal content is too long (maximum is 150 characters)"
+    end
+  end
+
 
 end
