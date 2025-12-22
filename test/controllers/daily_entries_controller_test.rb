@@ -24,7 +24,7 @@ class DailyEntriesControllerTest < ActionDispatch::IntegrationTest
   test "should not create daily entry without a mood" do
     assert_no_difference("DailyEntry.count") do
       post daily_entries_path, params: { daily_entry: { day_content: "Hi",  mood: nil } }
-      assert_select "div#error_explanation",  "The form contains 1 error • Mood can't be blank"
+      assert_select "div#error_explanation",  "The form contains 2 errors • Mood can't be blank • Mood is not included in the list"
     end
   end
     
