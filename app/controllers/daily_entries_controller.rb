@@ -10,7 +10,7 @@ class DailyEntriesController < ApplicationController
         
         if @daily_entry.save
             flash[:notice] = "Daily entry created successfully"
-            redirect_to daily_entries_path
+            redirect_to root_path
         else
             render :home, status: :unprocessable_entity
         end
