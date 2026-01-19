@@ -9,7 +9,7 @@
       <p> How did you feel? Use the faces to describe your mood, which one lines up best with how you feel? </p>
  </div>
 
- <%= form_with model: @daily_entry, url: daily_entries_path, local: true do |f| %>
+ <%= form_with model: @daily_entry, url: daily_entries_path, data: { turbo: false } do |f| %>
      <%= render "shared/error_messages", object: @daily_entry %>
      
   <div class="input-field-day-content">
