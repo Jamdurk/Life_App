@@ -17,9 +17,13 @@
     <%= f.text_area :day_content %>
   </div>
 
-  <div class="input-field-mood">
+  <div class="input-field-mood"> 
     <%= f.label :mood, "Mood" %>
-    <%= f.text_field :mood %> <%="placeholder until you do faces" %>
+    <%= f.hidden_field :mood, id: "mood-field" %> 
+
+    <button type="button" class="mood-face" data-mood="1">🙂</button>
+    <button type="button" class="mood-face" data-mood="2">😐</button>
+    <button type="button" class="mood-face" data-mood="3">😢</button>
 
     <%= f.submit "Submit" %>
   </div>
