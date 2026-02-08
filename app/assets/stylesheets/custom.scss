@@ -98,4 +98,46 @@ html, body {
   display: contents;
 }
 
+// Navbar styking //
+.navbar {
+  background-color: #4a148c; /* deep purple */
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: #e1bee7; /* light purple */
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: white;
+}
+
 
