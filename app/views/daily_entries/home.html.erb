@@ -1,13 +1,11 @@
-<div class='home-page'>
+<div class="content-container">
 <h1>Daily Entry</h1>
- <div><h1>Hello, welcome to your daily entry page.</h1></div>
+ <p>Hello, welcome to your daily entry page, </p>
   
-
- <div class="content-container">
   <p> Tell me about your day! </p>
     <p> What did you do? What was the best part? What was the worst part? </p>
       <p> How did you feel? Use the faces to describe your mood, which one lines up best with how you feel? </p>
- </div>
+ 
 
  <%= form_with model: @daily_entry, url: daily_entries_path, data: { turbo: false } do |f| %>
      <%= render "shared/error_messages", object: @daily_entry %>
@@ -28,3 +26,4 @@
     <%= f.submit "Submit" %>
   </div>
 <% end %>
+</div>

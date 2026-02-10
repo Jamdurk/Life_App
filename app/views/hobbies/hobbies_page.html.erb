@@ -1,12 +1,11 @@
+<div class="content-container">
 <h1>Hobbies Page</h1>
 <p> Hello welcome to your hobbies page.</p>
 
-<div class="content-container">
  <p> You can add the start and end date of your hobby, as well as the content of your hobby. </p>
    <p> What is your hobby? What do you enjoy doing? </p>
      <p> When did you start this hobby? Feel free to add an end date if you record a past or recently completed hobby.</p>
       <p> Think deeply on these things and write your hobby down!</p>
-</div>
 
 <%= form_with model: @hobby, url: hobbies_path, local: true do |f| %>
     <%= render "shared/error_messages", object: @hobby %>
@@ -28,3 +27,4 @@
 
     <%= f.submit "Submit" %>
 <% end %>
+</div>
