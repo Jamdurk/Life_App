@@ -15,6 +15,15 @@ class HobbiesController < ApplicationController
         end
     end
 
+    def show 
+        @hobby = Hobby.find_by(id: params[:id])
+        
+        if @hobby.nil?
+            flash[:alert] = "Hobby doesn't exist!"
+            redirect_to root_path
+        end 
+      end
+
 
 
     private 

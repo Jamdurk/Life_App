@@ -18,7 +18,16 @@ class GoalsController < ApplicationController
             render :goals_page, status: :unprocessable_entity
         end
     end
-  
+
+    def show 
+        @goal = Goal.find_by(id: params[:id])
+        
+        if @goal.nil?
+            flash[:alert] = "Goal doesn't exist!"
+            redirect_to root_path
+        end 
+      end
+
     private
   
       def goal_params

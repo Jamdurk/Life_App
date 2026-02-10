@@ -16,6 +16,15 @@ class DailyEntriesController < ApplicationController
         end
     end
 
+    def show 
+        @daily_entry = DailyEntry.find_by(id: params[:id])
+        
+        if @daily_entry.nil?
+            flash[:alert] = "Entry doesn't exist!"
+            redirect_to root_path
+        end 
+      end
+
     private
 
     def daily_entry_params
