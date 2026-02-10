@@ -1,0 +1,6 @@
+<h1><%= @daily_entry.day_content %></h1>
+
+<p><strong>Mood:</strong> <%= @daily_entry.mood %></p>
+<p><strong>Date:</strong> <%= @daily_entry.created_at.strftime("%B %d, %Y") %></p>
+
+<%= link_to "Back", root_path %>
