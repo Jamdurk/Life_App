@@ -1,0 +1,9 @@
+<h1>All Goals</h1>
+
+<% @goals.each do |goal| %>
+  <div>
+    <%= link_to goal.goal_start, goal_path(goal) %>
+  </div>
+<% end %>
+
+<%= link_to "Add New Goal", new_goal_path %>
