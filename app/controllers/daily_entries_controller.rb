@@ -25,6 +25,10 @@ class DailyEntriesController < ApplicationController
         end 
       end
 
+      def index
+        @daily_entry = DailyEntry.all
+      end
+
     private
 
     def daily_entry_params
