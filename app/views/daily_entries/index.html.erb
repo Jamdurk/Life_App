@@ -1,0 +1,9 @@
+<h1>All Daily Entries</h1>
+
+<% @daily_entry.each do |entry| %>
+  <div>
+    <%= link_to entry.created_at.strftime("%B %d, %Y"), daily_entry_path(entry) %>
+  </div>
+<% end %>
+
+<%= link_to "Add New Entry", root_path %>
