@@ -1,6 +1,6 @@
 class HobbiesController < ApplicationController
 
-    def hobbies_page
+    def new
         @hobby = Hobby.new
     end
 
@@ -24,7 +24,9 @@ class HobbiesController < ApplicationController
         end 
       end
 
-
+      def index
+        @hobby = Hobby.all
+      end
 
     private 
 

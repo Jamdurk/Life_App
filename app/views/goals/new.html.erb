@@ -8,7 +8,7 @@
      <p> What is a realsitic timeline for you to accomplish this goal? </p>
       <p> Think deeply on these things and write your goal down!</p>
 
-<%= form_with model: @goal, url: goals_path, local: true do |f| %>
+<%= form_with model: @goal, url: new_goal_path, local: true do |f| %>
     <%= render "shared/error_messages", object: @goal %>
 
     <div class="input-field-goal-start">
