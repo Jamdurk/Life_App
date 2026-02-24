@@ -147,7 +147,9 @@ GEM
     marcel (1.1.0)
     matrix (0.4.3)
     mini_mime (1.1.5)
-    minitest (5.27.0)
+    minitest (6.0.2)
+      drb (~> 2.0)
+      prism (~> 1.5)
     msgpack (1.8.0)
     net-imap (0.6.2)
       date
@@ -349,7 +351,7 @@ DEPENDENCIES
   error_highlight (>= 0.4.0)
   importmap-rails
   jbuilder
-  minitest (~> 5.25)
+  minitest (~> 6.0)
   puma (>= 5.0)
   rails (~> 7.2.2, >= 7.2.2.1)
   rubocop-rails-omakase
