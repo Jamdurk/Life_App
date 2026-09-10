@@ -131,4 +131,31 @@ html, body {
   color: white;
 }
 
+// Submission boxes //
+.input-field {
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    
+    textarea {
+      resize: none;
+    }
+    
+    label {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      text-align: right;
+      width: 400px;
+      line-height: 26px;
+      margin-bottom: 10px;
+    }
+    
+  }
+
+  
+  
+
+
 
