@@ -10,8 +10,7 @@
  <%= form_with model: @daily_entry, url: daily_entries_path, data: { turbo: false } do |f| %>
      <%= render "shared/error_messages", object: @daily_entry %>
      
-  <div class="input-field-day-content">
-    <%= f.label :day_content, "Day Content" %>
+  <div class="input-field">
     <%= f.text_area :day_content %>
   </div>
 
@@ -24,8 +23,6 @@
     <button type="button" class="mood-face" data-mood="3">😢</button>
 
     <%= f.submit "Submit" %>
-    
-    <p><%= link_to "All Entries", daily_entries_path %></p>
   </div>
 <% end %>
 </div>
