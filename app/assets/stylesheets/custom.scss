@@ -8,7 +8,9 @@ html, body {
   
   body {
     margin: 0;
-    background-color: #acabe6;
+    background-image: url('background.png');
+    background-size: 100% 100%;
+        
   }
   
   .content-container {
@@ -17,6 +19,8 @@ html, body {
     color: #333;
     font-size: 16px;
   }
+
+
 
 // Flash Message Styling //
 
@@ -91,9 +95,13 @@ html, body {
 
 // Navbar styking //
 .navbar {
-  background-color: #4a148c; /* deep purple */
-  padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  background-image: url('nav_image.png');
+  padding: 5px;
+  background-repeat: no-repeat;
+  background-size: 1000px; 
+  height: 50px;
+ 
+  
 }
 
 .container {
@@ -121,7 +129,7 @@ html, body {
 }
 
 .navbar-links a {
-  color: #e1bee7; /* light purple */
+  color: #000000; /* black */
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s;
@@ -153,6 +161,7 @@ html, body {
     }
     
   }
+
 
   
   
