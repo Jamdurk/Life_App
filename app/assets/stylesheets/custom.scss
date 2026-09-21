@@ -136,7 +136,7 @@ html, body {
 }
 
 .navbar-links a:hover {
-  color: white;
+  color: #6F8573;
 }
 
 // Submission boxes //
@@ -162,6 +162,19 @@ html, body {
     
   }
 
+  // pgae links //
+
+.page-links a {
+    
+    color: #000000; /* black */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.page-links a:hover {
+  color: #6F8573;
+}
 
   
   
